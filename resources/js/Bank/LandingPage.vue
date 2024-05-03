@@ -16,7 +16,7 @@ import Navbar from "../Components/Navbar.vue";
                 <h1
                     class="tracking-wider text-7xl font-black bg-gradient-to-r from-purple-400 via-purple-600 to-white text-transparent bg-clip-text"
                 >
-                    Banking.
+                    Banking. wsda
                 </h1>
                 <h1
                     class="tracking-wider text-7xl font-black bg-gradient-to-r from-purple-400 via-purple-600 to-white text-transparent bg-clip-text"
@@ -34,9 +34,7 @@ import Navbar from "../Components/Navbar.vue";
                     >Get started ></RouterLink
                 >
             </div>
-            <div class="cards hidden lg:mt-0 lg:col-span-5 lg:flex text-white">
-                
-            </div>
+            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex text-white"></div>
         </div>
     </section>
 </template>
@@ -48,15 +46,8 @@ h1 {
     font-style: normal;
 }
 
-section{
+section {
     background-image: url("/home/jmalvis/bank/resources/img/bg.png");
-    background: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.cards{
-    background-image: url("/home/jmalvis/bank/resources/img/cards.png");
     background: cover;
     background-size: cover;
     background-repeat: no-repeat;
