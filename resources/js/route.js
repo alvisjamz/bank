@@ -1,6 +1,11 @@
 import Index from "./Bank/App.vue"
-import Home from "./Bank/Home.vue"
-import Deposit from "./Bank/Deposit.vue"
+import LPage from "./Bank/LandingPage.vue"
+// import Deposit from "./Bank/Deposit.vue"
+import Services from "./Bank/Services.vue"
+import About from "./Bank/About.vue"
+import Login from "./Auth/CheckUser.vue"
+import Register from "./Auth/Register.vue"
+
 export const routes = [
     {
         path: '/',
@@ -9,13 +14,28 @@ export const routes = [
         children: [
             {
                 path: '', 
-                component: Home,
-                name: 'Home'
+                component: LPage,
+                name: 'LPage'
             },
             {
-                path: 'home/deposit',
-                component: Deposit,
-                name: 'Deposit'
+                path: 'services',
+                component: Services,
+                name: 'Services page'
+            },
+            {
+                path: 'about',
+                component: About,
+                name: 'About page'
+            },
+            {
+                path: 'auth/login',
+                component: Login,
+                name: 'Login page'
+            },
+            {
+                path: 'auth/register',
+                component: Register,
+                name: 'Register page'
             }
         ]
     }

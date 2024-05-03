@@ -1,7 +1,9 @@
 <script setup></script>
 
 <template>
-    <h1 class="text-3xl">this is deposit</h1>
+    <div>
+        services
+    </div>
 </template>
 
 <style lang="scss" scoped></style>
