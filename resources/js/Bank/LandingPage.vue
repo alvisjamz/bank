@@ -5,9 +5,9 @@ import Navbar from "../Components/Navbar.vue";
     <section class="h-screen">
         <Navbar />
         <div
-            class="grid px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 mt-12"
+            class="grid px-4 mx-auto"
         >
-            <div class="mx-auto place-self-center lg:col-span-7">
+            <div class="mx-auto place-self-center lg:col-span-1">
                 <h1
                     class="tracking-wider text-7xl font-black bg-gradient-to-r from-purple-400 via-purple-600 to-white text-transparent bg-clip-text"
                 >
@@ -16,7 +16,7 @@ import Navbar from "../Components/Navbar.vue";
                 <h1
                     class="tracking-wider text-7xl font-black bg-gradient-to-r from-purple-400 via-purple-600 to-white text-transparent bg-clip-text"
                 >
-                    Banking. wsda
+                    Banking.
                 </h1>
                 <h1
                     class="tracking-wider text-7xl font-black bg-gradient-to-r from-purple-400 via-purple-600 to-white text-transparent bg-clip-text"
@@ -34,7 +34,9 @@ import Navbar from "../Components/Navbar.vue";
                     >Get started ></RouterLink
                 >
             </div>
-            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex text-white"></div>
+            <div
+                class="cards lg:col-span-2"
+            ></div>
         </div>
     </section>
 </template>
@@ -48,6 +50,13 @@ h1 {
 
 section {
     background-image: url("/home/jmalvis/bank/resources/img/bg.png");
+    background: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cards {
+    background-image: url("/home/jmalvis/bank/resources/img/cards.png");
     background: cover;
     background-size: cover;
     background-repeat: no-repeat;

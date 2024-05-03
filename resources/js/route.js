@@ -3,7 +3,7 @@ import LPage from "./Bank/LandingPage.vue"
 // import Deposit from "./Bank/Deposit.vue"
 import Services from "./Bank/Services.vue"
 import About from "./Bank/About.vue"
-import Login from "./Auth/CheckUser.vue"
+import checkuser from "./Auth/CheckUser.vue"
 import Register from "./Auth/Register.vue"
 
 export const routes = [
@@ -28,9 +28,9 @@ export const routes = [
                 name: 'About page'
             },
             {
-                path: 'auth/login',
-                component: Login,
-                name: 'Login page'
+                path: 'auth/checkuser',
+                component: checkuser,
+                name: 'checkuser page'
             },
             {
                 path: 'auth/register',

@@ -10,7 +10,7 @@
                 >Services</RouterLink
             >
             <RouterLink
-                to="/auth/login"
+                to="/auth/checkuser"
                 class="text-xl border border-white p-1 rounded-xl w-40 text-center text-white"
                 >Login</RouterLink
             >
