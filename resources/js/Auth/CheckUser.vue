@@ -43,7 +43,7 @@ import Navbar from "../Components/Navbar.vue";
                                             class="relative mb-4"
                                             data-twe-input-wrapper-init
                                         >
-                                            <label>Password </label>
+                                            <label>Pincode </label>
                                             <input
                                                 type="password"
                                                 class="w-full rounded bg-gray-300 border-0"
