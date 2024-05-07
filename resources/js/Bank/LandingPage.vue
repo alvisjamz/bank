@@ -5,9 +5,9 @@ import Navbar from "../Components/Navbar.vue";
     <section class="h-screen">
         <Navbar />
         <div
-            class="grid px-4 mx-auto"
+            class="flex justify-center px-4 mx-auto"
         >
-            <div class="mx-auto place-self-center lg:col-span-1">
+            <div class="place-self-center">
                 <h1
                     class="tracking-wider text-7xl font-black bg-gradient-to-r from-purple-400 via-purple-600 to-white text-transparent bg-clip-text"
                 >
@@ -35,8 +35,10 @@ import Navbar from "../Components/Navbar.vue";
                 >
             </div>
             <div
-                class="cards lg:col-span-2"
-            ></div>
+                class=""
+            >
+            <img src="http://127.0.0.1:5173/resources/img/cards.png">
+        </div>
         </div>
     </section>
 </template>
@@ -55,10 +57,4 @@ section {
     background-repeat: no-repeat;
 }
 
-.cards {
-    background-image: url("/home/jmalvis/bank/resources/img/cards.png");
-    background: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 </style>
