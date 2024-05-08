@@ -1,12 +1,33 @@
 <script setup>
-import Navbar from "../Components/Navbar.vue";
 </script>
 <template>
     <section class="h-screen">
-        <Navbar />
-        <div
-            class="flex justify-center px-4 mx-auto"
-        >
+        <header class="container mx-auto p-6">
+            <nav class="flex justify-around">
+                <RouterLink
+                    to="/"
+                    class="text-xl text-center text-white font:Anton"
+                    >Logo</RouterLink
+                >
+                <RouterLink to="/" class="text-xl text-center text-white"
+                    >Home</RouterLink
+                >
+                <RouterLink to="/about" class="text-xl text-center text-white"
+                    >About</RouterLink
+                >
+                <RouterLink
+                    to="/services"
+                    class="text-xl text-center text-white"
+                    >Services</RouterLink
+                >
+                <RouterLink
+                    to="/auth/login"
+                    class="text-xl border border-white p-1 rounded-xl w-40 text-center text-white"
+                    >Login</RouterLink
+                >
+            </nav>
+        </header>
+        <div class="flex justify-center px-4 mx-auto">
             <div class="place-self-center">
                 <h1
                     class="tracking-wider text-7xl font-black bg-gradient-to-r from-purple-400 via-purple-600 to-white text-transparent bg-clip-text"
@@ -34,11 +55,9 @@ import Navbar from "../Components/Navbar.vue";
                     >Get started ></RouterLink
                 >
             </div>
-            <div
-                class=""
-            >
-            <img src="http://127.0.0.1:5173/resources/img/cards.png">
-        </div>
+            <div class="">
+                <img src="http://127.0.0.1:5173/resources/img/cards.png" />
+            </div>
         </div>
     </section>
 </template>
@@ -56,5 +75,4 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 </style>

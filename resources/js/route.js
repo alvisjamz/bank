@@ -1,42 +1,47 @@
-import Index from "./Bank/App.vue"
-import LPage from "./Bank/LandingPage.vue"
-// import Deposit from "./Bank/Deposit.vue"
-import Services from "./Bank/Services.vue"
-import About from "./Bank/About.vue"
-import checkuser from "./Auth/CheckUser.vue"
-import Register from "./Auth/Register.vue"
+import Index from "./Bank/App.vue";
+import LPage from "./Bank/LandingPage.vue";
+import Services from "./Bank/Services.vue";
+import About from "./Bank/About.vue";
+import Login from "./Auth/Login.vue";
+import Register from "./Auth/Register.vue";
+import Home from "./Bank/Home.vue"
 
 export const routes = [
     {
-        path: '/',
+        path: "/",
         component: Index,
-        name:"Index",
+        name: "Index",
         children: [
             {
-                path: '', 
+                path: "",
                 component: LPage,
-                name: 'LPage'
+                name: "LPage",
             },
             {
-                path: 'services',
+                path: "services",
                 component: Services,
-                name: 'Services page'
+                name: "Services page",
             },
             {
-                path: 'about',
+                path: "about",
                 component: About,
-                name: 'About page'
+                name: "About page",
             },
             {
-                path: 'auth/checkuser',
-                component: checkuser,
-                name: 'checkuser page'
+                path: "auth/login",
+                component: Login,
+                name: "Login page",
             },
             {
-                path: 'auth/register',
+                path: "auth/register",
                 component: Register,
-                name: 'Register page'
-            }
-        ]
-    }
-]
+                name: "Register page",
+            },
+            {
+                path: "client/home",
+                component: Home,
+                name: "Home page",
+            },
+        ],
+    },
+];

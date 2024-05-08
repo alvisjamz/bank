@@ -9,11 +9,6 @@
             <RouterLink to="/services" class="text-xl text-center text-white"
                 >Services</RouterLink
             >
-            <RouterLink
-                to="/auth/checkuser"
-                class="text-xl border border-white p-1 rounded-xl w-40 text-center text-white"
-                >Login</RouterLink
-            >
         </nav>
     </header>
 </template>
