@@ -17,7 +17,9 @@ class ClientController extends Controller
             $client->username = $request->username;
             $client->email = $request->email;
             $client->password = Hash::make($request->password);
-            $client->save();    
+            $client->save();  
+            
+        // Auth::login($client);
     }
 
 }

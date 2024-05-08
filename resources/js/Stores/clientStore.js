@@ -18,7 +18,7 @@ export const clientStore = defineStore("clotre", {
                 .then(({ data }) => {
                     if (data != null) {
                         this.$reset();
-                    }
+                    } 
                 });
         },
         // loginClient() {
