@@ -1,29 +1,23 @@
 import './bootstrap';
 import '../css/app.css';
-import { createApp, markRaw } from 'vue/dist/vue.esm-bundler.js';
-import { createRouter, createWebHistory, useRoute } from 'vue-router'
-import { routes } from './route';
-import { createPinia } from 'pinia';
 
-// components
-import Navbar from "./Components/Navbar.vue"
+import { createApp, h } from 'vue';
+import { createInertiaApp } from '@inertiajs/vue3';
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 
-const router = createRouter({
-    history: createWebHistory(),
-    routes : routes
-})
+const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
-const pinia = createPinia()
-
-pinia.use(({store}) => {
-    store.router = markRaw(router)
-    store.route = markRaw(useRoute())
-})
-
-const app = createApp({
-
+createInertiaApp({
+    title: (title) => `${title} - ${appName}`,
+    resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
+    setup({ el, App, props, plugin }) {
+        return createApp({ render: () => h(App, props) })
+            .use(plugin)
+            .use(ZiggyVue)
+            .mount(el);
+    },
+    progress: {
+        color: '#4B5563',
+    },
 });
-app.component('Navbar', Navbar);
-app.use(pinia)
-app.use(router);
-app.mount("#app");

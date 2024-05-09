@@ -1,12 +1,22 @@
 <script setup>
 import Navbar from "../Components/Navbar.vue";
-import { clientStore } from '@/Stores/clientStore'
-import { onMounted } from "vue";
-import { useRoute } from "vue-router";
-import { storeToRefs } from "pinia";
-const route = useRoute();
-const cstore = clientStore();
-const { form } = storeToRefs(cstore);
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const form = ref({
+    email: "",
+    password: "",
+});
+const handleLogin = async () => {
+    await axios.post(`/login`, {
+        email: form.value.email,
+        password: form.value.password,
+    });
+    router.push("/client/home");
+};
+
 </script>
 <template>
     <section class="h-screen">
@@ -26,7 +36,7 @@ const { form } = storeToRefs(cstore);
                                         </h1>
                                     </div>
 
-                                    <form>
+                                    <form @submit.prevent="handleLogin">
                                         <p class="mb-4">
                                             Welcome! Please enter the details
                                             required
@@ -36,9 +46,9 @@ const { form } = storeToRefs(cstore);
                                             class="relative mb-4"
                                             data-twe-input-wrapper-init
                                         >
-                                            <label>Username </label>
+                                            <label>Email </label>
                                             <input
-                                         
+                                                v-model="form.email"
                                                 type="text"
                                                 class="w-full rounded bg-gray-300 border-0"
                                             />
@@ -50,7 +60,7 @@ const { form } = storeToRefs(cstore);
                                         >
                                             <label>Password</label>
                                             <input
-                                         
+                                                v-model="form.password"
                                                 type="password"
                                                 class="w-full rounded bg-gray-300 border-0"
                                             />

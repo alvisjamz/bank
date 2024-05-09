@@ -14,7 +14,6 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-                Anton: ['Anton', ...defaultTheme.fontFamily.sans],
             },
         },
     },

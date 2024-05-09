@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -10,16 +11,16 @@ use Illuminate\Support\Facades\Hash;
 class ClientController extends Controller
 {
     public function storeClient(Request $request) {
-        $client = Client::find($request->id);
+        $client = User::find($request->id);
             if (!$client) {
-                $client = new Client();
+                $client = new User();
             }
-            $client->username = $request->username;
+            $client->name = $request->name;
             $client->email = $request->email;
             $client->password = Hash::make($request->password);
             $client->save();  
             
-        // Auth::login($client);
     }
+
 
 }
