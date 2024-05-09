@@ -1,13 +1,15 @@
 <script setup>
-import ApplicationLogo from '@/Components/ApplicationLogo.vue';
-import { Link } from '@inertiajs/vue3';
+import ApplicationLogo from "@/Components/ApplicationLogo.vue";
+import { Link } from "@inertiajs/vue3";
 </script>
 
 <template>
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+    <section
+        class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100"
+    >
         <div>
             <Link href="/">
-                <ApplicationLogo class="w-20 h-20 fill-current text-gray-500" />
+                <h1 class="text-white text-3xl">Tango Bank</h1>
             </Link>
         </div>
 
@@ -16,5 +18,16 @@ import { Link } from '@inertiajs/vue3';
         >
             <slot />
         </div>
-    </div>
+    </section>
 </template>
+
+<style scoped>
+section {
+    background-image: url("/home/jmalvis/bank/resources/img/bg.png");
+    background: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+</style>
+
+
